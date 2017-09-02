@@ -1,0 +1,20 @@
+#docker images
+docker images
+
+#docker run the container in background
+docker run -it -d imgae.name bash
+
+#docker to checked into container
+docker exec -it docker id bash
+
+#to check the docker container status
+docker ps -a 
+
+#to commit the docker new image
+docker commmit containerid username/imagename
+
+# push the changes
+docker push imagename
+
+#stop the docker
+docker stop container_id
