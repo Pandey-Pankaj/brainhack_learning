@@ -18,3 +18,6 @@ docker push imagename
 
 #stop the docker
 docker stop container_id
+
+
+docker run -it --rm -v /media/pankaj/829ECDB89ECDA4CF/Study/Year_2017/git_repository/nipype_tutorial/:/opt/tutorial -v /media/pankaj/829ECDB89ECDA4CF/Study/Year_2017/online_brain_intensive/Dataset/motor_language_spatial_attention/:/data -v /media/pankaj/829ECDB89ECDA4CF/Study/Year_2017/online_brain_intensive/Dataset/motor_language_spatial_attention/output/:/output -p 8888:8888 satra/nih-workshop-2017:latest jupyter notebook
