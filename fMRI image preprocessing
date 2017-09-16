@@ -1,0 +1,24 @@
+fMRI image preprocessing
+
+Data processing was performed using Analysis of Functional NeuroImaging1 (AFNI) and FMRIB Software Library2 (FSL). Image preprocessing consisted of 
+
+1. discarding the first 4 EPI volumes from each resting state scan to allow for signal equilibration; 
+
+2. slice time correction for interleaved acquisitions; 
+
+3. 3-D motion correction with Fourier interpolation;
+
+4. despiking (detection and removal of extreme time series outliers); 
+
+5. spatial smoothing using a 6-mm FWHM Gaussian kernel; 
+
+6. mean-based intensity normalization of all volumes by the same factor; 
+
+7. temporal bandpass filtering (0.009–0.1 Hz); and linear and quadratic detrending. 
+
+8. FSL FLIRT was used for linear registration of the high-resolution structural images to the MNI152 template (Jenkinson and Smith, 2001; Jenkinson et al., 2002). 
+	This transformation was then refined using FNIRT non-linear registration (Andersson et al., 2007). Linear registration of each participant’s functional time series to the high-resolution structural image was performed using FLIRT. This functional-to-anatomical co-registration was improved by intermediate registration to a low-resolution image and b0 unwarping.
+
+Nuisance signal regression
+
+To control for the effects of motion and physiological processes (i.e., cardiac and respiratory fluctuations) at each timepoint, each participant’s 4-D preprocessed volume was regressed with nine predictors that modeled white matter, cerebrospinal fluid, the global signal, and six motion parameters. The resultant 4-D residuals volumes were used in all subsequent analyses.

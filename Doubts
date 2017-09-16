@@ -1,0 +1,8 @@
+Doubts
+
+
+1. Why we don't use gradient coils to capture the complete brain volume at once.
+
+2. How this normalization is done ?
+
+Most fMRI images are created by combining multiple 2D slices into a single 3D volume.
